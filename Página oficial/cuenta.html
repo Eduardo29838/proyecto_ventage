@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Iniciar sesión | VENTAGE</title>
+
+  <!-- Bootstrap Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+  >
+
+  <!-- CSS del inicio de sesión -->
+  <link rel="stylesheet" href="estilo-login.css">
+</head>
+
+<body>
+
+  <main class="login-page">
+
+    <!-- Panel izquierdo: identidad de VENTAGE -->
+    <section class="login-imagen">
+      <div class="login-imagen-contenido">
+        <h1 class="login-logo">VENTAGE</h1>
+        <div class="linea-dorada"></div>
+        <p class="login-eslogan">
+          Diseña tu forma de ver el mundo.
+        </p>
+      </div>
+    </section>
+
+    <!-- Panel derecho: formulario -->
+    <section class="login-formulario">
+      <div class="login-contenido">
+
+        <h2 class="login-titulo">Iniciar sesión</h2>
+        <div class="linea-dorada"></div>
+
+        <p class="login-descripcion">
+          Bienvenido de nuevo a VENTAGE.<br>
+          Ingresa para continuar.
+        </p>
+
+        <form id="formLogin">
+
+          <label for="correo" class="form-label">
+            Correo electrónico
+          </label>
+
+          <div class="campo-login">
+            <input
+              type="email"
+              id="correo"
+              name="correo"
+              placeholder="ejemplo@correo.com"
+              autocomplete="email"
+              required
+            >
+            <i class="bi bi-person"></i>
+          </div>
+
+          <label for="password" class="form-label">
+            Contraseña
+          </label>
+
+          <div class="campo-login">
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Ingresa tu contraseña"
+              autocomplete="current-password"
+              required
+            >
+
+            <i class="bi bi-lock"></i>
+
+            <button
+              type="button"
+              class="mostrar-password"
+              id="mostrarPassword"
+              aria-label="Mostrar contraseña"
+              title="Mostrar contraseña"
+            >
+              <i class="bi bi-eye-slash" id="iconoPassword"></i>
+            </button>
+          </div>
+
+          <a href="recuperar-contrasena.html" class="recuperar">
+            ¿Olvidaste tu contraseña?
+          </a>
+
+          <button type="submit" class="btn-login">
+            INICIAR SESIÓN
+          </button>
+
+          <div
+            class="mensaje-login"
+            id="mensajeLogin"
+            role="status"
+            aria-live="polite"
+          ></div>
+
+        </form>
+
+        <div class="separador">o</div>
+
+        <a href="registro.html" class="crear-cuenta">
+          <i class="bi bi-person"></i>
+          CREAR CUENTA
+        </a>
+
+        <p class="login-seguridad">
+          <i class="bi bi-shield-lock-fill"></i>
+          Tus datos deben mantenerse protegidos.
+        </p>
+
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    // Mostrar u ocultar la contraseña
+    const password = document.getElementById("password");
+    const mostrarPassword = document.getElementById("mostrarPassword");
+    const iconoPassword = document.getElementById("iconoPassword");
+
+    mostrarPassword.addEventListener("click", () => {
+      const mostrar = password.type === "password";
+
+      password.type = mostrar ? "text" : "password";
+
+      iconoPassword.className = mostrar
+        ? "bi bi-eye"
+        : "bi bi-eye-slash";
+
+      mostrarPassword.setAttribute(
+        "aria-label",
+        mostrar ? "Ocultar contraseña" : "Mostrar contraseña"
+      );
+    });
+
+    // Demostración del formulario
+    document.getElementById("formLogin").addEventListener("submit", (evento) => {
+      evento.preventDefault();
+
+      const mensaje = document.getElementById("mensajeLogin");
+
+      mensaje.textContent =
+        "Este formulario es una demostración. Conecta tu sistema de autenticación para iniciar sesión.";
+      mensaje.style.display = "block";
+    });
+  </script>
+
+</body>
+</html>

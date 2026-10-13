@@ -1,0 +1,342 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>VENTAGE - Estilo e Innovación</title>
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+
+  <!-- Bootstrap Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+  >
+
+  <!-- CSS propio -->
+  <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+
+  <!-- ==============================
+       HEADER VENTAGE
+       ICONOS ARRIBA Y MENU ABAJO
+       ============================== -->
+
+  <header class="ventage-header sticky-top">
+    <div class="container">
+
+      <!-- FILA SUPERIOR: LOGO E ICONOS -->
+      <div class="ventage-top">
+
+        <!-- LOGO -->
+        <a class="logo" href="Prueba_Sitio_1.html">
+          VENTAGE
+        </a>
+
+        <!-- ICONOS DE UTILIDADES -->
+        <div class="ventage-icons">
+
+          
+<button type="button" class="ventage-icon" id="abrirBuscador" aria-label="Buscar productos" title="Buscar">
+  <i class="bi bi-search"></i>
+  <span>Buscar</span>
+</button>
+
+
+          <a
+            href="favoritos.html"
+            class="ventage-icon"
+            aria-label="Mis favoritos"
+            title="Favoritos"
+          >
+            <i class="bi bi-heart"></i>
+            <span>Favoritos</span>
+          </a>
+
+          <a
+            href="carrito.html"
+            class="ventage-icon"
+            aria-label="Carrito de compras"
+            title="Carrito"
+          >
+            <i class="bi bi-cart3"></i>
+            <span>Carrito</span>
+          </a>
+
+          <a
+            href="cuenta.html"
+            class="ventage-icon"
+            aria-label="Mi cuenta"
+            title="Mi cuenta"
+          >
+            <i class="bi bi-person"></i>
+            <span>Mi cuenta</span>
+          </a>
+
+          <a
+            href="pedidos.html"
+            class="ventage-icon"
+            aria-label="Mis pedidos y envíos"
+            title="Pedidos y envíos"
+          >
+            <i class="bi bi-box-seam"></i>
+            <span>Pedidos</span>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- FILA INFERIOR: MENU DE NAVEGACION -->
+      <nav class="ventage-nav" aria-label="Menú principal">
+
+        <a class="nav-link" href="lanzamientos.html">
+          Nuevos Lanzamientos
+        </a>
+
+        <a class="nav-link" href="sol.html">
+          Linea de Sol
+        </a>
+
+        <a class="nav-link" href="optica.html">
+          Linea Óptica
+        </a>
+
+        <a class="nav-link" href="hibrida.html">
+          Linea Híbrida
+        </a>
+
+        <a class="nav-link" href="perzonalizados.html">
+          Personalizados
+        </a>
+
+      </nav>
+
+    </div>
+  </header>
+
+<div class="buscador-overlay" id="buscadorOverlay">
+  <div class="buscador-contenedor">
+    <form id="formBuscador" class="buscador-form">
+      <i class="bi bi-search"></i>
+
+      <input
+        type="search"
+        id="inputBuscador"
+        placeholder="Buscar lentes, modelos o colecciones..."
+        aria-label="Buscar productos"
+        autocomplete="off"
+      >
+
+      <button type="submit" aria-label="Realizar búsqueda">
+        Buscar
+      </button>
+
+      <button
+        type="button"
+        id="cerrarBuscador"
+        class="cerrar-buscador"
+        aria-label="Cerrar buscador"
+      >✕</button>
+    </form>
+
+    <p class="buscador-ayuda">
+      Escribe el nombre de los lentes que quieres encontrar.
+    </p>
+
+    <div id="resultadosBuscador" class="resultados-buscador"></div>
+  </div>
+</div>
+
+
+  <!-- ==============================
+       HERO / PORTADA
+       ============================== -->
+
+  <main>
+
+    <section class="hero">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-9">
+
+            <h1>Diseña tu forma de ver el mundo</h1>
+
+            <p>
+              Armazones con estilo, calidad y personalidad.
+            </p>
+
+            <a class="btn btn-ventage" href="#productos">
+              Ver colección
+            </a>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==============================
+         PRODUCTOS
+         ============================== -->
+
+    <section id="productos" class="productos">
+      <div class="container">
+
+        <div class="text-center mb-5">
+
+          <h2>Nuestra Colección</h2>
+
+          <p class="section-subtitle">
+            Encuentra el armazón que representa tu estilo.
+          </p>
+
+        </div>
+
+        <div class="row g-4 justify-content-center">
+
+          <!-- PRODUCTO 1 -->
+          <div class="col-md-6 col-lg-4">
+            <article class="card product-card h-100">
+
+              <img
+                src="https://placehold.co/600x450/f8f7f3/111111?text=Linea+Predeterminada"
+                class="card-img-top"
+                alt="Armazones de la línea predeterminada"
+                loading="lazy"
+              >
+
+              <div class="card-body text-center">
+
+                <h3 class="card-title">
+                  Línea Predeterminada
+                </h3>
+
+                <p class="price">
+                  $1,699 - $1,899
+                </p>
+
+                <a
+                  href="lanzamientos.html"
+                  class="btn btn-outline-ventage"
+                >
+                  Ver modelo
+                </a>
+
+              </div>
+            </article>
+          </div>
+
+
+          <!-- PRODUCTO 2 -->
+          <div class="col-md-6 col-lg-4">
+            <article class="card product-card h-100">
+
+              <img
+                src="https://placehold.co/600x450/f8f7f3/111111?text=Linea+Hibrida"
+                class="card-img-top"
+                alt="Armazones de la línea híbrida"
+                loading="lazy"
+              >
+
+              <div class="card-body text-center">
+
+                <h3 class="card-title">
+                  Línea Híbrida
+                </h3>
+
+                <p class="price">
+                  $2,299 - $2,599
+                </p>
+
+                <a
+                  href="hibrida.html"
+                  class="btn btn-outline-ventage"
+                >
+                  Ver modelo
+                </a>
+
+              </div>
+            </article>
+          </div>
+
+
+          <!-- PRODUCTO 3 -->
+          <div class="col-md-6 col-lg-4">
+            <article class="card product-card h-100">
+
+              <img
+                src="https://placehold.co/600x450/f8f7f3/111111?text=Linea+Personalizada"
+                class="card-img-top"
+                alt="Armazones de la línea personalizada"
+                loading="lazy"
+              >
+
+              <div class="card-body text-center">
+
+                <h3 class="card-title">
+                  100% Personalizada
+                </h3>
+
+                <p class="price">
+                  $2,799 - $3,299
+                </p>
+
+                <a
+                  href="perzonalizados.html"
+                  class="btn btn-outline-ventage"
+                >
+                  Ver modelo
+                </a>
+
+              </div>
+            </article>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ==============================
+       FOOTER
+       ============================== -->
+
+  <footer id="contacto">
+    <div class="container">
+
+      <h2>VENTAGE</h2>
+
+      <p>
+        Diseña tu forma de ver el mundo.
+      </p>
+
+      <div class="footer-line"></div>
+
+      <p class="copyright">
+        © 2026 VENTAGE - Todos los derechos reservados
+      </p>
+
+    </div>
+  </footer>
+
+
+  <!-- BOOTSTRAP JS -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+  ></script>
+
+  <!-- JAVASCRIPT PROPIO -->
+  <script src="script.js"></script>
+
+</body>
+</html>
